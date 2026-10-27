@@ -1,0 +1,31 @@
+/* css/styles.css: Paleta moderna institucional y estados de componentes */
+:root { --primario: #5454E9; --exito: #4CB978; --error: #EF4444; --fondo: #F3F4F6; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: var(--fondo); display: flex; justify-content: center; padding: 2.5rem 1rem; margin: 0; }
+#root { width: 100%; max-width: 560px; }
+.app-container { background: white; padding: 2.2rem; border-radius: 12px; box-shadow: 0 4px 18px rgba(0,0,0,0.08); }
+.app-header h1 { margin: 0 0 0.3rem 0; color: #1F2937; font-size: 1.55rem; }
+.app-subtitle { margin: 0; color: #6B7280; font-size: 0.88rem; }
+.task-form { display: flex; gap: 0.5rem; margin: 1.5rem 0 1rem 0; }
+.task-form input { flex: 1; padding: 0.7rem 0.9rem; border: 1.5px solid #D1D5DB; border-radius: 8px; font-size: 0.9rem; }
+.task-form input:focus { outline: none; border-color: var(--primario); }
+.btn-add { background: var(--exito); color: white; border: none; padding: 0.7rem 1.2rem; border-radius: 8px; font-weight: 600; cursor: pointer; white-space: nowrap; }
+.btn-add:hover { background: #3EA668; }
+.btn-refresh { background: var(--primario); color: white; border: none; padding: 0.65rem 1.2rem; border-radius: 8px; font-weight: 600; font-size: 0.9rem; cursor: pointer; width: 100%; margin-bottom: 1rem; }
+.btn-refresh:hover { background: #3E3EC8; }
+.btn-add:disabled, .btn-refresh:disabled { background: #9CA3AF; cursor: not-allowed; }
+.loading-container { display: flex; align-items: center; justify-content: center; gap: 0.6rem; padding: 0.8rem 0; color: #4B5563; font-size: 0.88rem; }
+.spinner { width: 18px; height: 18px; border: 2.5px solid #E5E7EB; border-top-color: var(--primario); border-radius: 50%; animation: girar 0.8s linear infinite; }
+@keyframes girar { to { transform: rotate(360deg); } }
+.error-alert { background: #FEE2E2; color: #991B1B; padding: 0.85rem; border-radius: 8px; font-size: 0.88rem; border: 1px solid #FCA5A5; margin-bottom: 1rem; display: flex; justify-content: space-between; align-items: center; gap: 0.5rem; }
+.btn-retry { background: #DC2626; color: white; border: none; padding: 0.3rem 0.7rem; border-radius: 6px; font-size: 0.8rem; cursor: pointer; }
+.task-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.5rem; }
+.task-item { display: flex; align-items: center; justify-content: space-between; padding: 0.75rem 0.9rem; background: #F9FAFB; border: 1px solid #E5E7EB; border-radius: 8px; gap: 0.8rem; }
+.task-title { flex: 1; color: #1F2937; }
+.task-item.completed .task-title { text-decoration: line-through; color: #9CA3AF; }
+.task-actions { display: flex; align-items: center; gap: 0.5rem; }
+.badge { font-size: 0.72rem; padding: 0.2rem 0.45rem; border-radius: 12px; font-weight: 600; white-space: nowrap; }
+.badge-completed { background: #D1FAE5; color: #065F46; }
+.badge-pending { background: #FEF3C7; color: #92400E; }
+.btn-delete { background: transparent; border: 1px solid #FCA5A5; color: var(--error); border-radius: 6px; padding: 0.25rem 0.55rem; font-size: 0.76rem; cursor: pointer; font-weight: 600; }
+.btn-delete:hover { background: #FEE2E2; }
+.empty-message { text-align: center; color: #9CA3AF; padding: 1.5rem 0; }
